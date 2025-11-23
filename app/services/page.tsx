@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Services() {
   const services = [
     {
@@ -105,6 +107,46 @@ export default function Services() {
             </div>
             )
           })}
+        </div>
+
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Technologies We <span className="text-teal">Work With</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              We're experienced with modern web technologies and platforms
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 py-8">
+            {/* WordPress Logo */}
+            <div className="flex flex-col items-center group">
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+                <Image
+                  src="/logos/wordpress.svg.png"
+                  alt="WordPress"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="text-white font-semibold mt-4 text-sm md:text-base">WordPress</p>
+            </div>
+
+            {/* React Logo */}
+            <div className="flex flex-col items-center group">
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-dark border-2 border-teal rounded-2xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-hot-pink">
+                <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="8" fill="#61DAFB"/>
+                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6"/>
+                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(60 60 60)"/>
+                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(-60 60 60)"/>
+                </svg>
+              </div>
+              <p className="text-white font-semibold mt-4 text-sm md:text-base">React</p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-20 text-center">

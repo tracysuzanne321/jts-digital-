@@ -1,21 +1,21 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart Inc.',
-      content: 'JTS Digital transformed our online presence. Our website traffic increased by 300% and our social media engagement is through the roof!',
+      name: 'Dan Thomas',
+      role: 'Andrisca Properties',
+      content: "JTS Digital built our new website for Andrisca Properties and we're really pleased with it. It looks modern, runs smoothly and shows our building work clearly. They understood what we wanted straight away and made the whole process easy from start to finish. I'd happily recommend them.",
       color: 'teal',
     },
     {
-      name: 'Michael Chen',
-      role: 'Founder, Creative Studio',
-      content: 'The team at JTS Digital is incredibly talented. They understood our vision and brought it to life in ways we never imagined.',
+      name: 'Dave Smith',
+      role: 'HTR Autocentre',
+      content: "Our old garage website was outdated, but JTS Digital rebuilt it and it now looks professional and is much easier for customers to use. The booking system works brilliantly and we've already noticed more enquiries. Great communication and fast turnaround.",
       color: 'hot-pink',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Marketing Director, Fashion Co.',
-      content: 'Working with JTS Digital was a game-changer. Their social media strategy helped us reach a whole new audience and boost sales significantly.',
+      name: 'Libby Brown',
+      role: 'HeySales CRM',
+      content: 'JTS Digital created the website for our HeySales CRM platform and did an excellent job. They understood the product, explained things clearly and produced a clean, fast site that helps us show the system to clients. Reliable, skilled and very easy to work with.',
       color: 'golden-yellow',
     },
   ]

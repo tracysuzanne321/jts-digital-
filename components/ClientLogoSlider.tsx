@@ -7,7 +7,6 @@ export default function ClientLogoSlider() {
   const clientLogos = [
     '/logos/andrisca.svg',
     '/logos/HTR Autocentre.svg',
-    '/logos/BT Logo.svg',
     '/logos/College Survey Logo.svg',
     '/logos/Heysales.svg',
   ]

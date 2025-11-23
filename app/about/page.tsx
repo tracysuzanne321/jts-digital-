@@ -28,18 +28,21 @@ export default function About() {
 
   const team = [
     {
-      name: 'Alex Thompson',
-      role: 'Creative Director',
+      name: 'Jake Smith',
+      role: 'Lead Developer',
+      description: 'Jake is our lead developer and senior coding specialist. He handles the most complex technical builds, oversees system architecture, and ensures our projects are fast, secure, and scalable.',
       color: 'teal',
     },
     {
-      name: 'Jordan Martinez',
-      role: 'Lead Developer',
+      name: 'Tracy Smith',
+      role: 'Designer, Developer & Digital Media Lead',
+      description: 'Tracy works across design and development, creating clean, user-friendly interfaces and polished brand visuals. She also manages our social media output, video editing, and online communications.',
       color: 'hot-pink',
     },
     {
-      name: 'Taylor Kim',
-      role: 'Marketing Strategist',
+      name: 'Anthony Key',
+      role: 'Senior Developer',
+      description: 'Anthony is a senior developer with deep experience in building high-quality, reliable code. He specialises in solving difficult technical problems and bringing advanced functionality into our projects.',
       color: 'golden-yellow',
     },
   ]
@@ -153,7 +156,8 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {member.name}
                 </h3>
-                <p className="text-white/80">{member.role}</p>
+                <p className="text-white/90 font-semibold mb-4">{member.role}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{member.description}</p>
               </div>
               )
             })}

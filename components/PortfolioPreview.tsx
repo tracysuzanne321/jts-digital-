@@ -3,28 +3,32 @@ import Link from 'next/link'
 export default function PortfolioPreview() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      category: 'Web Development',
+      title: 'Andrisca Properties',
+      category: 'Professional Building Services in Shropshire',
       color: 'teal',
-      description: 'Modern e-commerce solution with seamless checkout experience',
+      description: 'A modern website for a long-established building company with over 35 years of experience. The site showcases kitchens, bathrooms, extensions and full property renovations.',
+      url: 'https://andrisca.co.uk/',
     },
     {
-      title: 'Brand Identity',
-      category: 'Design & Marketing',
+      title: 'HTR Autocentre',
+      category: 'MOT Testing, Car Servicing & Repairs in Telford',
       color: 'hot-pink',
-      description: 'Complete brand transformation with social media strategy',
+      description: 'A full rebuild for a family-run garage, with DVSA-approved MOT information, clear pricing, and an easy online booking system.',
+      url: 'https://htrautocentre.co.uk/',
     },
     {
-      title: 'SaaS Dashboard',
-      category: 'Web Development',
+      title: 'College Survey',
+      category: 'Activism in American Colleges',
       color: 'golden-yellow',
-      description: 'Intuitive dashboard for data analytics platform',
+      description: 'A clear, easy-to-use guide for parents researching activism levels across US colleges, with simple ratings and category filters.',
+      url: 'https://college.genspect.org/',
     },
     {
-      title: 'Fashion Brand',
-      category: 'Design & Marketing',
+      title: 'HeySales CRM',
+      category: 'A CRM Built for Buying Journeys',
       color: 'bright-red',
-      description: 'Vibrant website and social media presence for fashion brand',
+      description: 'A fast, modern site for a new CRM that automates admin, analyses calls and helps sales teams close more revenue.',
+      url: 'https://www.heysales.co.uk/',
     },
   ]
 
@@ -62,15 +66,28 @@ export default function PortfolioPreview() {
                 <h3 className="text-3xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-white/90 mb-4">
+                <p className="text-white/90 mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                <Link 
-                  href="/portfolio" 
-                  className="text-white font-semibold hover:underline inline-flex items-center"
-                >
-                  View Project →
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-semibold hover:underline inline-flex items-center gap-2"
+                  >
+                    Visit Website
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <Link 
+                    href="/portfolio" 
+                    className="text-white/80 font-semibold hover:text-white hover:underline inline-flex items-center"
+                  >
+                    View Details →
+                  </Link>
+                </div>
               </div>
             </div>
             )
