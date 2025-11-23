@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  body {
+    @apply bg-dark text-white;
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .geometric-shape {
+    position: absolute;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .geometric-circle {
+    border-radius: 50%;
+  }
+  
+  .geometric-square {
+    transform: rotate(45deg);
+  }
+  
+  .geometric-triangle {
+    width: 0;
+    height: 0;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    border-bottom: solid;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-teal {
+    @apply btn-primary bg-teal text-dark hover:bg-teal/90;
+  }
+  
+  .btn-pink {
+    @apply btn-primary bg-hot-pink text-white hover:bg-hot-pink/90;
+  }
+  
+  .btn-yellow {
+    @apply btn-primary bg-golden-yellow text-dark hover:bg-golden-yellow/90;
+  }
+  
+  .btn-red {
+    @apply btn-primary bg-bright-red text-white hover:bg-bright-red/90;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl text-gray-300 mb-8;
+  }
+  
+  .color-block {
+    @apply p-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  }
+}
+
