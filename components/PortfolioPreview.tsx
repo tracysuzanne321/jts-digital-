@@ -17,11 +17,11 @@ export default function PortfolioPreview() {
       url: 'https://htrautocentre.co.uk/',
     },
     {
-      title: 'College Survey',
-      category: 'Activism in American Colleges',
+      title: 'Hello Restaurant',
+      category: 'Table Management Platform for UK Restaurants',
       color: 'golden-yellow',
-      description: 'A clear, easy-to-use guide for parents researching activism levels across US colleges, with simple ratings and category filters.',
-      url: 'https://college.genspect.org/',
+      description: 'Smart table-management platform for UK restaurants, replacing paper diaries and spreadsheets to cut no-shows and maximise revenue.',
+      url: 'https://hellorestaurant.co.uk/',
     },
     {
       title: 'HeySales CRM',

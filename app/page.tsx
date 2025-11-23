@@ -3,10 +3,12 @@ import ClientLogoSlider from '@/components/ClientLogoSlider'
 import ServicesPreview from '@/components/ServicesPreview'
 import PortfolioPreview from '@/components/PortfolioPreview'
 import Testimonials from '@/components/Testimonials'
+import BackgroundWords from '@/components/BackgroundWords'
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
+      <BackgroundWords />
       <Hero />
       <ClientLogoSlider />
       <ServicesPreview />

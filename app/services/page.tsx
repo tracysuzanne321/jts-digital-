@@ -119,32 +119,108 @@ export default function Services() {
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 py-8">
-            {/* WordPress Logo */}
-            <div className="flex flex-col items-center group">
-              <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
-                <Image
-                  src="/logos/wordpress.svg.png"
-                  alt="WordPress"
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-contain"
-                />
+          <div className="space-y-12 py-8">
+            {/* Top Row - 4 Logos */}
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {/* WordPress Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/wordpress.svg.png"
+                    alt="WordPress"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">WordPress</p>
               </div>
-              <p className="text-white font-semibold mt-4 text-sm md:text-base">WordPress</p>
+
+              {/* React Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="8" fill="#61DAFB"/>
+                    <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6"/>
+                    <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(60 60 60)"/>
+                    <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(-60 60 60)"/>
+                  </svg>
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">React</p>
+              </div>
+
+              {/* Next.js Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/nextjs.png"
+                    alt="Next.js"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">Next.js</p>
+              </div>
+
+              {/* WooCommerce Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/WooCommerce-Logo.jpg"
+                    alt="WooCommerce"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">WooCommerce</p>
+              </div>
             </div>
 
-            {/* React Logo */}
-            <div className="flex flex-col items-center group">
-              <div className="w-24 h-24 md:w-32 md:h-32 bg-dark border-2 border-teal rounded-2xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-hot-pink">
-                <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="60" cy="60" r="8" fill="#61DAFB"/>
-                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6"/>
-                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(60 60 60)"/>
-                  <ellipse cx="60" cy="60" rx="45" ry="12" fill="none" stroke="#61DAFB" strokeWidth="2.5" opacity="0.6" transform="rotate(-60 60 60)"/>
-                </svg>
+            {/* Bottom Row - 3 Logos */}
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {/* AWS Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/aws.png"
+                    alt="AWS"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">AWS</p>
               </div>
-              <p className="text-white font-semibold mt-4 text-sm md:text-base">React</p>
+
+              {/* Cloudflare Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/cloudflare.png"
+                    alt="Cloudflare"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">Cloudflare</p>
+              </div>
+
+              {/* Mailchimp Logo */}
+              <div className="flex flex-col items-center group">
+                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-2xl p-3 md:p-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl border-2 border-gray-800">
+                  <Image
+                    src="/logos/Mailchimp-logo.png"
+                    alt="Mailchimp"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-white font-semibold mt-3 text-sm md:text-base">Mailchimp</p>
+              </div>
             </div>
           </div>
         </div>

@@ -26,11 +26,22 @@ export default function Portfolio() {
       engagement: 92,
     },
     {
+      title: 'Hello Restaurant',
+      category: 'All-in-One Table Management Platform',
+      description: 'Hello Restaurant was created to help UK restaurants move away from paper diaries and spreadsheets and manage bookings more efficiently. The platform gives front-of-house teams a clear, real-time view of table availability, upcoming reservations and customer details.',
+      results: 'It helps reduce no-shows through better reminders and gives managers the control they need to maximise revenue by filling gaps during busy service. The interface is designed to be simple, fast and easy for staff to use on both desktop and tablet, making it a practical tool for restaurants of any size.',
+      color: 'golden-yellow',
+      tags: ['Web Development', 'Table Management', 'SaaS'],
+      image: '/logos/hellorestaurant.png',
+      url: 'https://hellorestaurant.co.uk/',
+      engagement: 90,
+    },
+    {
       title: 'College Survey',
       category: 'Activism Ratings for American Colleges',
       description: 'The College Survey project needed a website that helped parents understand activism levels in American colleges during the application process. We built a clean information site that organises each college into three activism categories with clear explanations, policy summaries and student-support information.',
       results: 'The simple structure makes the data easy to explore, and families now spend more time on the pages due to the improved layout. The site has become a useful tool for parents looking for objective information before their children apply to university.',
-      color: 'golden-yellow',
+      color: 'bright-red',
       tags: ['Web Design', 'Data Visualization', 'Education'],
       image: '/logos/College.png',
       url: 'https://college.genspect.org/',
@@ -41,7 +52,7 @@ export default function Portfolio() {
       category: 'CRM Website for Sales Teams',
       description: 'HeySales needed a modern website to introduce their CRM built for real buying journeys, not manual data entry. We designed a clean, fast site explaining the product, its co-pilot features, call analysis and forecasting tools.',
       results: 'The clear messaging and simple structure help visitors understand the platform quickly. The site improved sign-ups for the free trial and supports the sales team with clearer product explanations and better landing-page performance.',
-      color: 'bright-red',
+      color: 'green',
       tags: ['React', 'CRM', 'SaaS'],
       image: '/logos/Heysales.png',
       url: 'https://www.heysales.co.uk/',
@@ -68,6 +79,7 @@ export default function Portfolio() {
               'hot-pink': 'border-hot-pink',
               'golden-yellow': 'border-golden-yellow',
               'bright-red': 'border-bright-red',
+              'green': 'border-green',
             }[project.color] || 'border-teal'
             
             const textClasses = {
@@ -75,6 +87,7 @@ export default function Portfolio() {
               'hot-pink': 'text-hot-pink',
               'golden-yellow': 'text-golden-yellow',
               'bright-red': 'text-bright-red',
+              'green': 'text-green',
             }[project.color] || 'text-teal'
             
             return (
