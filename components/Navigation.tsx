@@ -55,19 +55,19 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-4">
-            <Link href="/" className="block text-gray-300 hover:text-teal transition-colors font-medium">
+            <Link href="/" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-teal transition-colors font-medium">
               Home
             </Link>
-            <Link href="/services" className="block text-gray-300 hover:text-teal transition-colors font-medium">
+            <Link href="/services" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-teal transition-colors font-medium">
               Services
             </Link>
-            <Link href="/portfolio" className="block text-gray-300 hover:text-teal transition-colors font-medium">
+            <Link href="/portfolio" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-teal transition-colors font-medium">
               Portfolio
             </Link>
-            <Link href="/about" className="block text-gray-300 hover:text-teal transition-colors font-medium">
+            <Link href="/about" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-teal transition-colors font-medium">
               About
             </Link>
-            <Link href="/contact" className="block text-gray-300 hover:text-teal transition-colors font-medium">
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-teal transition-colors font-medium">
               Contact
             </Link>
           </div>
