@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import AnimatedCounter from '@/components/AnimatedCounter'
 
 export default function Portfolio() {
   const projects = [
@@ -11,43 +12,47 @@ export default function Portfolio() {
       tags: ['WordPress', 'Web Design', 'Building Services'],
       image: '/logos/andrisca.png',
       url: 'https://andrisca.co.uk/',
+      engagement: 85,
     },
     {
       title: 'HTR Autocentre',
       category: 'Garage Website with MOT Booking System',
-      description: 'HTR Autocentre has served Telford since 1984 and needed a modern website that matched their reputation. I rebuilt the full site with clearer service pages, DVSA-approved MOT information and a simple online booking flow for MOTs, servicing and repairs.',
+      description: 'HTR Autocentre has served Telford since 1984 and needed a modern website that matched their reputation. We rebuilt the full site with clearer service pages, DVSA-approved MOT information and a simple online booking flow for MOTs, servicing and repairs.',
       results: 'The new layout helps customers find what they need quickly, and the garage now receives more online bookings than before. The improved structure also increased traffic from local search results and reduced calls about basic information, as visitors can now see everything clearly on the site.',
       color: 'hot-pink',
       tags: ['Web Development', 'Booking System', 'Automotive'],
       image: '/logos/HTR.png',
       url: 'https://htrautocentre.co.uk/',
+      engagement: 92,
     },
     {
       title: 'College Survey',
       category: 'Activism Ratings for American Colleges',
-      description: 'The College Survey project needed a website that helped parents understand activism levels in American colleges during the application process. I built a clean information site that organises each college into three activism categories with clear explanations, policy summaries and student-support information.',
+      description: 'The College Survey project needed a website that helped parents understand activism levels in American colleges during the application process. We built a clean information site that organises each college into three activism categories with clear explanations, policy summaries and student-support information.',
       results: 'The simple structure makes the data easy to explore, and families now spend more time on the pages due to the improved layout. The site has become a useful tool for parents looking for objective information before their children apply to university.',
       color: 'golden-yellow',
       tags: ['Web Design', 'Data Visualization', 'Education'],
       image: '/logos/College.png',
       url: 'https://college.genspect.org/',
+      engagement: 78,
     },
     {
       title: 'HeySales CRM',
       category: 'CRM Website for Sales Teams',
-      description: 'HeySales needed a modern website to introduce their CRM built for real buying journeys, not manual data entry. I designed a clean, fast site explaining the product, its co-pilot features, call analysis and forecasting tools.',
+      description: 'HeySales needed a modern website to introduce their CRM built for real buying journeys, not manual data entry. We designed a clean, fast site explaining the product, its co-pilot features, call analysis and forecasting tools.',
       results: 'The clear messaging and simple structure help visitors understand the platform quickly. The site improved sign-ups for the free trial and supports the sales team with clearer product explanations and better landing-page performance.',
       color: 'bright-red',
       tags: ['React', 'CRM', 'SaaS'],
       image: '/logos/Heysales.png',
       url: 'https://www.heysales.co.uk/',
+      engagement: 88,
     },
   ]
 
   return (
     <div className="pt-20 px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center py-12 mb-16">
           <h1 className="section-title">
             Our <span className="text-hot-pink">Portfolio</span>
           </h1>
@@ -89,6 +94,17 @@ export default function Portfolio() {
                       fill
                       className="object-contain p-8"
                     />
+                  </div>
+                  {/* Engagement Percentage Overlay */}
+                  <div className="absolute top-4 right-4 bg-dark/90 backdrop-blur-sm rounded-full px-6 py-4 border-2 border-white/20">
+                    <div className="text-center">
+                      <div className={`text-3xl font-bold ${textClasses} mb-1`}>
+                        <AnimatedCounter value={project.engagement} />
+                      </div>
+                      <div className="text-xs text-gray-400 font-semibold uppercase tracking-wide">
+                        Engagement
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

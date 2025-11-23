@@ -2,7 +2,7 @@ export default function TermsOfService() {
   return (
     <div className="pt-20 px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center py-12 mb-12">
           <h1 className="section-title">
             Terms of <span className="text-teal">Service</span>
           </h1>

@@ -50,7 +50,7 @@ export default function About() {
   return (
     <div className="pt-20 px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center py-12 mb-16">
           <h1 className="section-title">
             About <span className="text-teal">JTS Digital</span>
           </h1>
