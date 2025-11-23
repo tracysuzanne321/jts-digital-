@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { Rocket } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,8 +11,10 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="text-2xl font-bold text-teal hover:text-hot-pink transition-colors">
-            JTS Digital
+          <Link href="/" className="group flex items-center gap-2 text-2xl font-bold transition-all duration-300">
+            <Rocket className="w-6 h-6 text-teal group-hover:text-hot-pink group-hover:-translate-y-2 group-hover:rotate-12 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,79,163,0.6)] transition-all duration-300 ease-out" />
+            <span className="text-white group-hover:text-hot-pink group-hover:scale-105 transition-all duration-300">JTS</span>
+            <span className="text-teal group-hover:text-hot-pink group-hover:scale-105 transition-all duration-300">Digital</span>
           </Link>
           
           {/* Desktop Menu */}

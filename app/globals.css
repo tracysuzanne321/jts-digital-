@@ -65,5 +65,37 @@
   .color-block {
     @apply p-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
   }
+  
+  .animate-logo-scroll {
+    animation: logo-scroll 30s linear infinite;
+  }
+  
+  .animate-logo-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
 }
 

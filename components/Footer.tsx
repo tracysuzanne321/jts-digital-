@@ -72,8 +72,23 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} JTS Digital. All rights reserved.</p>
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-center md:text-left">
+              &copy; {new Date().getFullYear()} JTS Digital. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-teal transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-teal transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookie-policy" className="text-gray-400 hover:text-teal transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
