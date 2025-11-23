@@ -10,10 +10,10 @@ export default function Contact() {
     message: '',
   })
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
-    const form = e.target as HTMLFormElement
+    const form = e.currentTarget
     const formDataToSubmit = new FormData(form)
     
     // Encode form data for Netlify
@@ -23,6 +23,7 @@ export default function Contact() {
     })
     
     try {
+      // Submit to Netlify Forms
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -32,14 +33,15 @@ export default function Contact() {
       if (response.ok) {
         alert('Thank you for your message! We\'ll get back to you soon.')
         setFormData({ name: '', email: '', company: '', message: '' })
-        // Reset form
         form.reset()
       } else {
-        alert('There was an error submitting your form. Please try again.')
+        const text = await response.text()
+        console.error('Form submission failed:', text)
+        alert('There was an error submitting your form. Please try again or contact us directly.')
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('There was an error submitting your form. Please try again.')
+      alert('There was an error submitting your form. Please try again or contact us directly.')
     }
   }
 
@@ -149,7 +151,6 @@ export default function Contact() {
             <form 
               name="contact" 
               method="POST" 
-              action="/?success=true"
               data-netlify="true" 
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
