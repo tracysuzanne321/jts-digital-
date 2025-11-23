@@ -16,16 +16,24 @@ export default function Contact() {
     const form = e.target as HTMLFormElement
     const formDataToSubmit = new FormData(form)
     
+    // Encode form data for Netlify
+    const encoded = new URLSearchParams()
+    formDataToSubmit.forEach((value, key) => {
+      encoded.append(key, value as string)
+    })
+    
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSubmit as any).toString(),
+        body: encoded.toString(),
       })
       
       if (response.ok) {
         alert('Thank you for your message! We\'ll get back to you soon.')
         setFormData({ name: '', email: '', company: '', message: '' })
+        // Reset form
+        form.reset()
       } else {
         alert('There was an error submitting your form. Please try again.')
       }
@@ -141,6 +149,7 @@ export default function Contact() {
             <form 
               name="contact" 
               method="POST" 
+              action="/?success=true"
               data-netlify="true" 
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
@@ -148,8 +157,12 @@ export default function Contact() {
             >
               {/* Hidden field for Netlify form identification */}
               <input type="hidden" name="form-name" value="contact" />
-              {/* Honeypot field for spam protection */}
-              <input type="hidden" name="bot-field" />
+              {/* Honeypot field for spam protection - hidden from users */}
+              <div style={{ display: 'none' }}>
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </div>
               
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
